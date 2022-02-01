@@ -1,0 +1,22 @@
+{
+  "name": "js-calculator",
+  "version": "1.0.0",
+  "description": "A simple calculator. I innovated since no one coded this to train in js ^^",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./main.scss:./style.css --style expanded",
+    "prefix": "postcss ./style.css --use autoprefixer -d ./style-prefixed.css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-BastienPruvost/js-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-BastienPruvost/js-calculator/issues"
+  },
+  "homepage": "https://github.com/Dev-BastienPruvost/js-calculator#readme",
+  "browserslist": "last 4 versions"
+}

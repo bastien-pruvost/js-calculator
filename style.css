@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+a:visited {
+  color: #707070;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 412px;
+  max-height: 915px;
+  background: #2d2d2d;
+  box-shadow: 0 0 20px #444444ce;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.displayer {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  letter-spacing: 1px;
+}
+.displayer__calcul {
+  color: #d4d4d4;
+  font-size: 1.1rem;
+  padding: 3% 0;
+  font-style: italic;
+  font-weight: 400;
+}
+.displayer__result {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 3% 0;
+}
+
+.keyboard {
+  width: 100%;
+  height: 65%;
+  padding: 12vh 8% 4vh 8%;
+  border-radius: 40px 40px 0 0;
+  background: #343434;
+  display: grid;
+  gap: 3%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "clear clear clear ." ". . . ." ". . . ." ". . . ." "zero zero . .";
+}
+.keyboard [id=clear] {
+  grid-area: clear;
+}
+.keyboard [id="0"] {
+  grid-area: zero;
+}
+
+.btn {
+  background: none;
+  color: #d4d4d4;
+  border: 1px solid #d4d4d4;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  outline: inherit;
+  padding: 0;
+}
+.btn--op {
+  border: 1px solid #907819;
+  font-weight: 400;
+  color: #bbbbbb;
+}
+.btn--clear {
+  font-style: italic;
+  font-weight: 400;
+  color: #a1a1a1;
+  margin-right: 35%;
+}
+
+/*# sourceMappingURL=style.css.map */

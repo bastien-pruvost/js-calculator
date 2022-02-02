@@ -84,6 +84,24 @@ body {
   max-width: 90%;
 }
 
+.reducedFontSize1 {
+  font-size: 2rem;
+}
+@media screen and (max-width: 412px) {
+  .reducedFontSize1 {
+    font-size: 1.7rem;
+  }
+}
+
+.reducedFontSize2 {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 412px) {
+  .reducedFontSize2 {
+    font-size: 1.3rem;
+  }
+}
+
 .keyboard {
   width: 100%;
   height: 65%;

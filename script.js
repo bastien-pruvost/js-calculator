@@ -5,10 +5,6 @@ const displayResult = document.querySelector(".displayer__result");
 let calcul = "";
 let calculFromResult = false; //Becomes true when user want to calculate from the previous result.
 
-let originalFontSize = "2.5rem";
-let reducedFontSize1 = "2rem";
-let reducedFontSize2 = "1.5rem";
-
 
 //Clear actual calculation.
 function clearCalcul() {
@@ -62,39 +58,41 @@ buttons.forEach(function (button) {
       displayCalcul.textContent += " " + e.target.innerText + " ";
 
       //Reset the original font-size
-      displayResult.style.fontSize = originalFontSize;
-
-      //If the result is float and has more than 14 digits
+      displayResult.classList.remove("reducedFontSize1");
+      displayResult.classList.remove("reducedFontSize2");
+      console.log(isFloat(eval(calcul)) && eval(calcul).toString().length >= 12);
+      //If the result is float and has more than 12 digits
       if (isFloat(eval(calcul)) && eval(calcul).toString().length > 14) {
         //Calculate the number of digits before the decimal point
         let lengthWithoutFloat = Math.round(eval(calcul)).toString().length;
         //Determines to how many digits after the decimal the number is rounded
-        let afterCommaLength = 13 - lengthWithoutFloat;
+        let afterCommaLength = 11 - lengthWithoutFloat;
         //Set a minimum of 2 digits after the decimal point
         if (afterCommaLength <= 1) { afterCommaLength = 2; }
-        //Reduce font size of displayer if float result has more than 14 or 17 digits.
-        if (eval(calcul).toFixed(afterCommaLength).toString().length > 14) {
-          displayResult.style.fontSize = reducedFontSize1;
+        //Reduce font size of displayer if float result has more than 12 or 16 digits.
+        if (eval(calcul).toFixed(afterCommaLength).toString().length >= 12) {
+          displayResult.classList.add("reducedFontSize1");
         }
-        if (eval(calcul).toFixed(afterCommaLength).toString().length > 17) {
-          displayResult.style.fontSize = reducedFontSize2;
+        if (eval(calcul).toFixed(afterCommaLength).toString().length >= 16) {
+          displayResult.classList.add("reducedFontSize2");
         }
         //Display the rounded result with the correct number of digits.
         displayResult.textContent = eval(calcul).toFixed(afterCommaLength);
 
         //If the result is not a float number
       } else {
-        //Reduce font size of displayer if number has more than 13 or 16 digits.
-        if (eval(calcul).toString().length > 13) {
-          displayResult.style.fontSize = reducedFontSize1;
+        //Reduce font size of displayer if number has more than 12 or 16 digits.
+        if (eval(calcul).toString().length >= 12) {
+          displayResult.classList.add("reducedFontSize1");
         }
-        if (eval(calcul).toString().length > 16) {
-          displayResult.style.fontSize = reducedFontSize2;
+        if (eval(calcul).toString().length >= 16) {
+          displayResult.classList.add("reducedFontSize2");
         }
 
         //Display the result
         displayResult.textContent = eval(calcul);
       }
+
       //Put the result in the actual calculation var
       calcul = eval(calcul);
 

@@ -40,12 +40,20 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 412px;
-  max-height: 915px;
+  max-width: 390px;
+  max-height: 860px;
   background: #2d2d2d;
   box-shadow: 0 0 20px #444444ce;
-  border-radius: 40px;
+  border-radius: 35px;
   overflow: hidden;
+}
+@media screen and (max-width: 412px) {
+  .app {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+    max-height: none;
+  }
 }
 
 .displayer {
@@ -57,29 +65,34 @@ body {
   justify-content: center;
   padding-top: 30px;
   letter-spacing: 1px;
+  word-wrap: break-word;
+  text-align: center;
 }
 .displayer__calcul {
   color: #d4d4d4;
-  font-size: 1.1rem;
-  padding: 3% 0;
+  font-size: 1.5rem;
+  padding: 3%;
   font-style: italic;
   font-weight: 400;
+  max-width: 90%;
 }
 .displayer__result {
-  color: #ffffff;
+  color: #f0f0f0;
   font-size: 2.5rem;
   font-weight: 600;
-  padding: 3% 0;
+  padding: 3%;
+  max-width: 90%;
 }
 
 .keyboard {
   width: 100%;
   height: 65%;
-  padding: 12vh 8% 4vh 8%;
-  border-radius: 40px 40px 0 0;
+  padding: 12vh 8% 3.5vh 8%;
+  border-radius: 35px 35px 0 0;
   background: #343434;
   display: grid;
-  gap: 3%;
+  row-gap: 3%;
+  column-gap: 4%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "clear clear clear ." ". . . ." ". . . ." ". . . ." "zero zero . .";
@@ -92,22 +105,37 @@ body {
 }
 
 .btn {
-  background: none;
+  background: #343434;
+  box-shadow: -5px 5px 9px #303030, 5px -5px 9px #383838, inset 0 0 0 #303030, inset 0 0 0 #383838;
   color: #d4d4d4;
   border: 1px solid #d4d4d4;
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  transition: 0.2s ease-in-out;
+  transition: 0.06s ease-in-out;
   cursor: pointer;
-  outline: inherit;
+  outline: none;
   padding: 0;
+}
+@media screen and (max-width: 412px) {
+  .btn {
+    cursor: default;
+  }
+}
+.btn:active {
+  background: #343434;
+  box-shadow: 0 0 0 #303030, 0 0 0 #383838, inset -5px 5px 9px #303030, inset 5px -5px 9px #383838;
+  border: 1px solid #9c9c9c;
+  color: #aeaeae;
 }
 .btn--op {
   border: 1px solid #907819;
-  font-weight: 400;
+  font-weight: 500;
   color: #bbbbbb;
+}
+.btn--op:active {
+  border: 1px solid #766214;
 }
 .btn--clear {
   font-style: italic;

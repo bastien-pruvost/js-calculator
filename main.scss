@@ -19,7 +19,7 @@ $keysColorLight: #ffffff;
 $secondaryColorLight: #f4dc7b;
 
 // Media queries breakpoints
-
+$mobile: 412px;
 //soon
 
 // Reset css
@@ -62,12 +62,18 @@ body {
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	max-width: 412px;
-	max-height: 915px;
+	max-width: 390px;
+	max-height: 860px;
 	background: $displayColorDark;
 	box-shadow: 0 0 20px #444444ce;
-	border-radius: 40px;
+	border-radius: 35px;
 	overflow: hidden;
+	@media screen and (max-width: $mobile) {
+		box-shadow: none;
+		border-radius: 0;
+		max-width: none;
+		max-height: none;
+	}
 }
 
 .displayer {
@@ -79,33 +85,35 @@ body {
 	justify-content: center;
 	padding-top: 30px;
 	letter-spacing: 1px;
-
+	word-wrap: break-word;
+	text-align: center;
 	&__calcul {
 		color: $textColorDark;
-		font-size: 1.1rem;
-		padding: 3% 0;
+		font-size: 1.5rem;
+		padding: 3%;
 		font-style: italic;
 		font-weight: 400;
+		max-width: 90%;
 	}
-
 	&__result {
-		color: #ffffff;
+		color: #f0f0f0;
 		font-size: 2.5rem;
 		font-weight: 600;
-		padding: 3% 0;
+		padding: 3%;
+		max-width: 90%;
 	}
 }
 
 .keyboard {
 	width: 100%;
 	height: 65%;
-	padding: 12vh 8% 4vh 8%;
-	border-radius: 40px 40px 0 0;
+	padding: 12vh 8% 3.5vh 8%;
+	border-radius: 35px 35px 0 0;
 	background: $keysColorDark;
-
 	//keyboard grid
 	display: grid;
-	gap: 3%;
+	row-gap: 3%;
+	column-gap: 4%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	grid-template-areas:
@@ -123,21 +131,34 @@ body {
 }
 
 .btn {
-	background: none;
+	background: #343434;
+	box-shadow: -5px 5px 9px #303030, 5px -5px 9px #383838, inset 0 0 0#303030, inset 0 0 0 #383838;
 	color: $textColorDark;
 	border: 1px solid $textColorDark;
 	border-radius: 30px;
 	font-family: $font1;
 	font-size: 1.5rem;
 	font-weight: 500;
-	transition: 0.2s ease-in-out;
+	transition: 0.06s ease-in-out;
 	cursor: pointer;
-	outline: inherit;
+	outline: none;
 	padding: 0;
+	@media screen and (max-width: $mobile) {
+		cursor: default;
+	}
+	&:active {
+		background: #343434;
+		box-shadow: 0 0 0 #303030, 0 0 0 #383838, inset -5px 5px 9px #303030, inset 5px -5px 9px #383838;
+		border: 1px solid darken($textColorDark, 22%);
+		color: darken($textColorDark, 15%);
+	}
 	&--op {
 		border: 1px solid $secondaryColorDark;
-		font-weight: 400;
+		font-weight: 500;
 		color: darken($textColorDark, 10%);
+		&:active {
+			border: 1px solid darken($secondaryColorDark, 6%);
+		}
 	}
 	&--clear {
 		font-style: italic;

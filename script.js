@@ -1,12 +1,13 @@
 const buttons = document.querySelectorAll(".btn");
 const displayCalcul = document.querySelector(".displayer__calcul");
 const displayResult = document.querySelector(".displayer__result");
+
 let calcul = "";
 let calculFromResult = false; //Becomes true when user want to calculate from the previous result.
+
 let originalFontSize = "2.5rem";
 let reducedFontSize1 = "2rem";
 let reducedFontSize2 = "1.5rem";
-let reducedFontSize3 = "1rem";
 
 
 //Clear actual calculation.

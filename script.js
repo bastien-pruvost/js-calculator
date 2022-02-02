@@ -62,7 +62,7 @@ buttons.forEach(function (button) {
       displayResult.classList.remove("reducedFontSize2");
       console.log(isFloat(eval(calcul)) && eval(calcul).toString().length >= 12);
       //If the result is float and has more than 12 digits
-      if (isFloat(eval(calcul)) && eval(calcul).toString().length > 14) {
+      if (isFloat(eval(calcul)) && eval(calcul).toString().length >= 12) {
         //Calculate the number of digits before the decimal point
         let lengthWithoutFloat = Math.round(eval(calcul)).toString().length;
         //Determines to how many digits after the decimal the number is rounded

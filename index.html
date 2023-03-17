@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>JS Simple Calculator</title>
+    <link rel="icon" type="image/png" href="./icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Simple Calculator</title>
-  <link rel="icon" type="image/png" href="./icon.png" />
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <div class="app">
+      <div class="displayer">
+        <span class="displayer__calcul"></span>
+        <span class="displayer__result"></span>
+      </div>
 
-<body>
-
-  <div class="app">
-
-    <div class="displayer">
-      <span class="displayer__calcul"></span>
-      <span class="displayer__result"></span>
+      <div class="keyboard">
+        <button class="btn btn--clear" id="clear">AC</button>
+        <button class="btn btn--op" id="divide" name="/">/</button>
+        <button class="btn" id="7">7</button>
+        <button class="btn" id="8">8</button>
+        <button class="btn" id="9">9</button>
+        <button class="btn btn--op" id="multiply" name="*">x</button>
+        <button class="btn" id="4">4</button>
+        <button class="btn" id="5">5</button>
+        <button class="btn" id="6">6</button>
+        <button class="btn btn--op" id="minus" name="-">-</button>
+        <button class="btn" id="1">1</button>
+        <button class="btn" id="2">2</button>
+        <button class="btn" id="3">3</button>
+        <button class="btn btn--op" id="plus" name="+">+</button>
+        <button class="btn btn" id="0">0</button>
+        <button class="btn" id="dot">.</button>
+        <button class="btn btn--equal" id="equal">=</button>
+      </div>
     </div>
 
-    <div class="keyboard">
-      <button class="btn btn--clear" id="clear">AC</button>
-      <button class="btn btn--op" id="divide" name="/">/</button>
-      <button class="btn" id="7">7</button>
-      <button class="btn" id="8">8</button>
-      <button class="btn" id="9">9</button>
-      <button class="btn btn--op" id="multiply" name="*">x</button>
-      <button class="btn" id="4">4</button>
-      <button class="btn" id="5">5</button>
-      <button class="btn" id="6">6</button>
-      <button class="btn btn--op" id="minus" name="-">-</button>
-      <button class="btn" id="1">1</button>
-      <button class="btn" id="2">2</button>
-      <button class="btn" id="3">3</button>
-      <button class="btn btn--op" id="plus" name="+">+</button>
-      <button class="btn btn" id="0">0</button>
-      <button class="btn" id="dot">.</button>
-      <button class="btn btn--equal" id="equal">=</button>
-    </div>
-
-  </div>
-
-  <script src="./script.js"></script>
-
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>

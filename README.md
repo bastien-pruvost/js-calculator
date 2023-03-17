@@ -1,16 +1,87 @@
+<!-- prettier-ignore-start -->
+
+<!-- Rename all occurences with Cmd + D :
+
+JS - Calculator
+js-calculator
+calculator.pruvostbastien.fr
+https://calculator.pruvostbastien.fr
+
+ -->
+
 # JS - Calculator
-<a href="https://calculator.pruvostbastien.fr/" target="_blank"><img src="https://img.shields.io/badge/ctrl_%2B_click_here_to_see_the_website-324050?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-## A calculator in JavaScript
+A simple calculator in JavaScript
 
-A simple project to practice.  
-The code is not perfect but I modified it as I went along to integrate a calculation function from the last result (depending on whether the user presses a number or an operator after his last calculation the calculator knows if he wants to do a new calculation or calculate from the last result).  
-I also integrated a management of the number of decimal places. When rounding, the number of decimal places is calculated based on the space available on display.  
+[calculator.pruvostbastien.fr](https://calculator.pruvostbastien.fr)
 
----
 
-## Une calculatrice en JavaScript
+## About the project
 
-Un projet simple pour s'entrainer.  
-Le code n'est pas parfait mais je l'ai modifié au fur et a mesure pour integrer une fonction de calcul depuis le dernier resultat (selon si l'utilisateur appuie sur un numero ou un operateur après son dernier calcul la calculatrice sait si il veut faire un nouveau calcul ou calculer depuis le dernier resultat).  
-J'ai également intégré une gestion du nombre de chiffre après la virgule. Au moment d'arrondir le nombre de chiffre après la virgule est calculé en fonction de la place qu'a le resultat pour s'afficher.
+A JS project to practice.
+
+I integrate a calculation function from the last result (depending on whether the user presses a number or an operator after his last calculation the calculator knows if he wants to do a new calculation or calculate from the last result).
+
+I also integrated a management of the number of decimal places. When rounding, the number of decimal places is calculated based on the space available on display.
+
+
+## Features
+
+- Calculation from the last result
+- Number of decimal based on available space
+
+
+## Run locally
+
+1. Clone the project:
+
+```bash
+  git clone https://github.com/bastien-pruvost/js-calculator.git
+```
+
+2. Go to the project directory:
+
+```bash
+  cd js-calculator
+```
+
+3. Run `index.html` file with your browser
+
+
+## Suggestions
+
+If you have any suggestion, feel free to [create an issue](https://github.com/bastien-pruvost/js-calculator/issues) with the tag "enhancement"
+
+
+## Report bug / Support
+
+To report a bug or get help, please [create an issue](https://github.com/bastien-pruvost/js-calculator/issues).
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
+
+1. [Fork the project](https://github.com/bastien-pruvost/js-calculator/fork)
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Code your feature
+4. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+5. Push to the branch (`git push origin feature/my-feature`)
+6. [Open a pull request](https://github.com/bastien-pruvost/js-calculator/compare)
+
+You can also simply open an issue with the tag "enhancement".
+
+Don't forget to give the project a star! Thanks again!
+
+
+## License
+
+Distributed under the [MIT License](https://choosealicense.com/licenses/mit).
+
+See `LICENSE` file for more information.
+
+
+
+<!-- prettier-ignore-end -->
